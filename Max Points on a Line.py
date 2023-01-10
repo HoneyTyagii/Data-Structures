@@ -19,7 +19,7 @@
 
 # 1 <= points.length <= 300
 # points[i].length == 2
-# -104 <= xi, yi <= 104
+# -104 <= xi,yi <= 104
 # All the points are unique
 
 class Solution:
