@@ -16,6 +16,7 @@
 # Example 2:
 
 
+
 # Input: p = [1,2], q = [1,null,2]
 # Output: false
 # Example 3:
