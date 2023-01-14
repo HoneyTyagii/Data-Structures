@@ -21,7 +21,6 @@
 
 # Example 3:
 
-
 # Input: p = [1,2,1], q = [1,1,2]
 # Output: false
  
