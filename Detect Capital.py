@@ -15,7 +15,7 @@
 
 # Input: word = "FlaG"
 # Output: false
- 
+
 
 # Constraints:
 
