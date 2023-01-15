@@ -19,7 +19,7 @@
 # Constraints:      
 
 # 1 <= word.length <= 100        
-# word consists of lowercase and uppercase English letters.              
+# word consists of lowercase and uppercase English letters.                            
 
 
 # Approach
