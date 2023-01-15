@@ -16,7 +16,6 @@
 # Input: word = "FlaG"
 # Output: false
 
-
 # Constraints:
 
 # 1 <= word.length <= 100
