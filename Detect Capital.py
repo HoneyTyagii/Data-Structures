@@ -16,7 +16,7 @@
 # Input: word = "FlaG"
 # Output: false
 
-# Constraints:
+# Constraints:      
 
 # 1 <= word.length <= 100
 # word consists of lowercase and uppercase English letters.
