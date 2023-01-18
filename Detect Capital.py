@@ -11,7 +11,7 @@
 
 # Input: word = "USA"
 # Output: true
-# Example 2:
+# Example 2:           
 
 # Input: word = "FlaG"
 # Output: false
