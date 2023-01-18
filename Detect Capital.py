@@ -5,7 +5,7 @@
 # Only the first letter in this word is capital, like "Google".
 # Given a string word, return true if the usage of capitals in it is right.
                 
-      
+              
 
 # Example 1:
                   
