@@ -8,7 +8,7 @@
                                                    
    
 # Example 1:
-                  
+                                       
 # Input: word = "USA"           
 # Output: true
 # Example 2:           
