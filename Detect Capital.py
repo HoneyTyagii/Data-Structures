@@ -14,7 +14,7 @@
 # Example 2:           
 
 # Input: word = "FlaG"
-# Output: false
+# Output: false             
 
 # Constraints:      
            
