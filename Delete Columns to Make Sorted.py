@@ -11,7 +11,7 @@
 
 # Return the number of columns that you will delete.
 
- 
+
 
 # Example 1:
 
@@ -33,23 +33,23 @@
 # Example 3:
 
 # Input: strs = ["zyx","wvu","tsr"]
-# Output: 3
+# Output: 3  
 # Explanation: The grid looks as follows:
 #   zyx
 #   wvu
 #   tsr
-# All 3 columns are not sorted, so you will delete all 3.
- 
-
+# All 3 columns are not sorted, so you will delete all 3.  
+   
+  
 # Constraints:
-
+  
 # n == strs.length
 # 1 <= n <= 100
 # 1 <= strs[i].length <= 1000
 # strs[i] consists of lowercase English letters.
-
+  
 #code
-
+  
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
         counter = 0
