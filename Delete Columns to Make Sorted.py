@@ -14,7 +14,7 @@
 
 
 # Example 1:
-
+       
 # Input: strs = ["cba","daf","ghi"]
 # Output: 1
 # Explanation: The grid looks as follows:
