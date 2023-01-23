@@ -10,5 +10,5 @@ class Solution:
         for i in range(1,n+1):
             if beingTrustedBy[i] == n-1 and trusting[i] == 0:
                 return i
-        
+           
         return -1
