@@ -12,7 +12,7 @@ class Solution:
                 return step
             
             for move in range(1, 7):
-                ncell = cur + move
+                ncell = cur + move          
                 if ncell > goal:
                     break
                 r, c = self.n2rc(ncell)
