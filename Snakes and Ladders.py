@@ -6,7 +6,7 @@ class Solution:
         queue = [(1, 0)]
         visited = set()
         
-        while queue:
+        while queue:       
             cur, step = queue.pop(0)
             if cur == goal:
                 return step
