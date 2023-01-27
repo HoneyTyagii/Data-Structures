@@ -31,7 +31,7 @@ class Solution:
     def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
         def can(w,dit):
             for i in range(mini,len(w)):
-                lf=w[:i]
+                lf=w[:i]  
                 rt=w[i:]
                 if lf in dit:
                     if rt in dit or can(rt,dit):
