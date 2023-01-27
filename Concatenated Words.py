@@ -34,7 +34,7 @@ class Solution:
                 lf=w[:i]  
                 rt=w[i:]
                 if lf in dit:
-                    if rt in dit or can(rt,dit):
+                    if rt in dit or can(rt,dit):      
                         return True
         res=[]        
         dit = set(list(words))
