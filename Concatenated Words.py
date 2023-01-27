@@ -36,7 +36,7 @@ class Solution:
                 if lf in dit:
                     if rt in dit or can(rt,dit):
                         return True
-        res=[]
+        res=[]        
         dit = set(list(words))
         mini=10000
         for w in words:
