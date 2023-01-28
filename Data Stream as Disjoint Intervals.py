@@ -10,7 +10,7 @@
  
             
 # Example 1:          
-           
+                               
 # Input
 # ["SummaryRanges", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals"]
 # [[], [1], [], [3], [], [7], [], [2], [], [6], []]
