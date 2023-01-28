@@ -2,7 +2,7 @@
 
 # Given a data stream input of non-negative integers a1, a2, ..., an, summarize the numbers seen so far as a list of disjoint intervals.
               
-# Implement the SummaryRanges class:
+# Implement the SummaryRanges class:             
                      
 # SummaryRanges() Initializes the object with an empty stream.
 # void addNum(int value) Adds the integer value to the stream.
