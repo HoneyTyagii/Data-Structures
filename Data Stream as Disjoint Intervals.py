@@ -35,3 +35,38 @@
 
 # 0 <= value <= 104
 # At most 3 * 104 calls will be made to addNum and getIntervals.
+
+class SummaryRanges:
+
+	def __init__(self):
+		self.set = set()
+
+	def addNum(self, value: int) -> None:
+		self.set.add(value)
+
+	def getIntervals(self) -> List[List[int]]:
+
+		result = []
+		index = 1
+		array = sorted(list(self.set))
+		
+		start = array[0]
+		current_element = array[0]
+
+		if len(array) == 1:
+			result.append([start, start])
+			return result
+
+		while index < len(array):
+
+			if array[index] != current_element + 1:
+				result.append([start, array[index - 1]])
+				start = array[index]
+
+			current_element = array[index]
+			index = index + 1
+
+		result.append([start,array[index - 1]])
+
+		return result 
+		
