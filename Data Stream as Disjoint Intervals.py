@@ -83,7 +83,7 @@ class DLinkedList:
             return
         
         if not node:            
-            node = self._sentinel.prev           
+            node = self._sentinel.prev                    
 
         node.prev.next = node.next
         node.next.prev = node.prev
