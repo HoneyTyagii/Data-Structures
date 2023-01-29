@@ -78,7 +78,7 @@ class DLinkedList:
         self._sentinel.next = node
         self._size += 1
     
-    def pop(self, node=None):
+    def pop(self, node=None):        
         if self._size == 0:
             return
         
