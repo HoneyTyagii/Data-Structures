@@ -1,8 +1,5 @@
 # 460. LFU Cache
-# Hard
-# 4.5K
-# 278
-# Companies
+
 # Design and implement a data structure for a Least Frequently Used (LFU) cache.
 
 # Implement the LFUCache class:
