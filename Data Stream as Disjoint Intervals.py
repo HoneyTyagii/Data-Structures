@@ -85,7 +85,7 @@ class DLinkedList:
         if not node:            
             node = self._sentinel.prev                    
 
-        node.prev.next = node.next
+        node.prev.next = node.next              
         node.next.prev = node.prev
         self._size -= 1
         
