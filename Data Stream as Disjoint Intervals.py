@@ -95,7 +95,7 @@ class LFUCache:
     def __init__(self, capacity):
 
         self._size = 0           
-        self._capacity = capacity
+        self._capacity = capacity                           
         
         self._node = dict()
         self._freq = collections.defaultdict(DLinkedList)
