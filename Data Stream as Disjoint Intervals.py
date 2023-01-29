@@ -79,7 +79,7 @@ class DLinkedList:
         self._size += 1
     
     def pop(self, node=None):        
-        if self._size == 0:
+        if self._size == 0:        
             return
         
         if not node:            
