@@ -91,7 +91,7 @@ class DLinkedList:
         
         return node
                        
-class LFUCache:
+class LFUCache:      
     def __init__(self, capacity):
 
         self._size = 0           
