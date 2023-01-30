@@ -25,3 +25,15 @@
 
 # 0 <= n <= 37
 # The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
+
+class Solution:
+    def tribonacci(self, n: int) -> int:
+        if n == 0:
+            return 0
+        elif n == 1 or n == 2:
+            return 1
+        else:
+            a, b, c = 0, 1, 1
+            for i in range(3, n + 1):
+                a, b, c = b, c, a + b + c
+            return c                           
