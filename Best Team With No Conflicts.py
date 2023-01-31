@@ -13,7 +13,7 @@
 # Input: scores = [1,3,5,10,15], ages = [1,2,3,4,5]
 # Output: 34
 # Explanation: You can choose all the players.
-# Example 2:
+# Example 2:         
 
 # Input: scores = [4,5,6,5], ages = [2,1,2,1]        
 # Output: 16          
