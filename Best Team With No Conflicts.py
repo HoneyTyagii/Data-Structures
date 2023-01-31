@@ -22,7 +22,7 @@
 
 # Input: scores = [1,2,3,5], ages = [8,9,10,1]
 # Output: 6
-# Explanation: It is best to choose the first 3 players. 
+# Explanation: It is best to choose the first 3 players.         
  
 
 # Constraints:
