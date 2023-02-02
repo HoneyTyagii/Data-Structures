@@ -45,4 +45,3 @@ class Solution:
                 if len(word1) > len(word2):
                     return False
         return True
-         
