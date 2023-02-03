@@ -36,3 +36,19 @@
 # 1 <= s.length <= 1000
 # s consists of English letters (lower-case and upper-case), ',' and '.'.
 # 1 <= numRows <= 1000
+
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows==1: return s
+        res = ["" for i in range(numRows)]
+        i = 0
+        direction = -1
+        for c in s:
+            res[i] += c
+            if i==0 or i==numRows-1:
+                direction *= -1
+            i += direction
+        zigzag = ""
+        for row in res:
+            zigzag += row
+        return zigzag
