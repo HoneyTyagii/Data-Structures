@@ -37,6 +37,6 @@ class Solution:
                 cntr[s2[i-w]] += 1
 
             if matched == len(cntr):
-                return True
+                return True 
 
         return False
