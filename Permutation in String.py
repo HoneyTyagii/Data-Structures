@@ -34,7 +34,7 @@ class Solution:
             if i >= w and s2[i-w] in cntr: 
                 if cntr[s2[i-w]] == 0:
                     matched -= 1
-                cntr[s2[i-w]] += 1
+                cntr[s2[i-w]] += 1 
 
             if matched == len(cntr):
                 return True 
