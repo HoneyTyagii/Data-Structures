@@ -26,3 +26,21 @@
 # 1 <= n <= 500
 # nums.length == 2n
 # 1 <= nums[i] <= 10^3
+
+from typing import List
+
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        # Initialize an empty list to store shuffled elements
+        shuffled = []
+        
+        # Loop wiil go through the first n elements of nums
+        for i in range(n):
+            # current element from the first half of nums to the shuffled list
+            shuffled.append(nums[i])
+            
+            # corresponding element from the second half of nums to the shuffled list
+            shuffled.append(nums[i+n])
+        
+        # Returning shuffled list
+        return shuffled
