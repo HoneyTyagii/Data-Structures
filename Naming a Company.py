@@ -2,7 +2,6 @@
 # Hard
 # 1.4K
 # 62
-# Companies
 # You are given an array of strings ideas that represents a list of names to be used in the process of naming a company. The process of naming a company is as follows:
 
 # Choose 2 distinct names from ideas, call them ideaA and ideaB.
