@@ -2,7 +2,6 @@
 # Medium
 # 2.6K
 # 134
-# Companies
 # You are given an integer n, the number of nodes in a directed graph where the nodes are labeled from 0 to n - 1. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.
 
 # You are given two arrays redEdges and blueEdges where:
