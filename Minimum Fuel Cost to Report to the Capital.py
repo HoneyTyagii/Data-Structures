@@ -1,5 +1,4 @@
 # 2477. Minimum Fuel Cost to Report to the Capital
-# Medium
 
 # There is a tree (i.e., a connected, undirected graph with no cycles) structure country network consisting of n cities numbered from 0 to n - 1 and exactly n - 1 roads. The capital city is city 0. You are given a 2D integer array roads where roads[i] = [ai, bi] denotes that there exists a bidirectional road connecting cities ai and bi.
 
