@@ -1,7 +1,5 @@
 1523. Count Odd Numbers in an Interval Range
 Easy
-2.2K
-134
 Companies
 Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
 
