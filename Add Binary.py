@@ -1,7 +1,6 @@
 # 67. Add Binary
 # Easy
 # 7.4K
-# 731
 # Companies
 # Given two binary strings a and b, return their sum as a binary string.
 
