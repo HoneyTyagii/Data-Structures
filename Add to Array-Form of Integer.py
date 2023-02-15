@@ -1,8 +1,6 @@
 # 989. Add to Array-Form of Integer
 # Easy
 # 2.7K
-# 229
-# Companies
 # The array-form of an integer num is an array representing its digits in left to right order.
 
 # For example, for num = 1321, the array form is [1,3,2,1].
