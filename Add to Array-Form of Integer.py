@@ -30,3 +30,22 @@
 # 0 <= num[i] <= 9
 # num does not contain any leading zeros except for the zero itself.
 # 1 <= k <= 104
+
+class Solution:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+
+        k_digits = [int(d) for d in str(k)]
+        
+        carry = 0
+        result = []
+        
+        while num or k_digits or carry:
+            a = num.pop() if num else 0
+            b = k_digits.pop() if k_digits else 0            
+            digit_sum = a + b + carry
+            carry = digit_sum // 10
+            digit_sum = digit_sum % 10
+            
+            result.append(digit_sum)
+        
+        return result[::-1]
