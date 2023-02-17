@@ -29,7 +29,7 @@
 # -231 <= nums[i] <= 231 - 1
 
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
+    def firstMissingPositive(self, nums: List[int]) -> int: 
         seen = set()
         for num in nums:
             seen.add(num)  
