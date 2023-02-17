@@ -28,7 +28,7 @@
 # 1 <= nums.length <= 105
 # -231 <= nums[i] <= 231 - 1
 
-class Solution:
+class Solution: 
     def firstMissingPositive(self, nums: List[int]) -> int: 
         seen = set()
         for num in nums:
