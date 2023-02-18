@@ -35,7 +35,7 @@ class Solution:
             seen.add(num)  
         i=1
         while i <= len(nums): 
-            if i not in seen:
+            if i not in seen: 
                 return i
             else:
                 i += 1
