@@ -30,7 +30,7 @@
 
 class Solution: 
     def firstMissingPositive(self, nums: List[int]) -> int: 
-        seen = set()
+        seen = set() 
         for num in nums:
             seen.add(num)  
         i=1
