@@ -38,7 +38,7 @@
 # 1 <= numRows <= 1000
  
 class Solution:
-    def convert(self, s: str, numRows: int) -> str:
+    def convert(self, s: str, numRows: int) -> str: 
         if numRows==1: return s 
         res = ["" for i in range(numRows)]  
         i = 0 
