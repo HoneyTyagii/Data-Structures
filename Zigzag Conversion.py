@@ -44,7 +44,7 @@ class Solution:
         i = 0  
         direction = -1   
         for c in s:
-            res[i] += c
+            res[i] += c 
             if i==0 or i==numRows-1: 
                 direction *= -1 
             i += direction
