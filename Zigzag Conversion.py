@@ -45,7 +45,7 @@ class Solution:
         direction = -1   
         for c in s:
             res[i] += c
-            if i==0 or i==numRows-1:
+            if i==0 or i==numRows-1: 
                 direction *= -1
             i += direction
         zigzag = ""
