@@ -42,7 +42,7 @@ class Solution:
         if numRows==1: return s  
         res = ["" for i in range(numRows)]    
         i = 0  
-        direction = -1   
+        direction = -1    
         for c in s:
             res[i] += c 
             if i==0 or i==numRows-1: 
