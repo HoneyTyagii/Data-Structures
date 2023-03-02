@@ -30,7 +30,7 @@ class Solution:
         mid = len(nums) // 2
         left = self.merge_sort(nums[:mid])
         right = self.merge_sort(nums[mid:])
-        return self.merge(left, right)
+        return self.merge(left, right) 
 
     def merge(self, left, right):
         i = j = 0
