@@ -13,7 +13,7 @@
 # Output: true  
 # Example 2:                                     
 
-# Input: word = "FlaG"
+# Input: word = "FlaG" 
 # Output: false             
 
 # Constraints:      
