@@ -27,7 +27,7 @@
 # If the string is empty, return True. 
 
 # If the string has only one character, return True. 
-
+ 
 # If the first character is uppercase and the rest of the characters are lowercase, return True. 
 
 # If the first character is lowercase and the rest of the characters are uppercase, return False.  
