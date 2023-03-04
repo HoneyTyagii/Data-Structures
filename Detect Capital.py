@@ -24,7 +24,7 @@
 
 # Approach
 
-# If the string is empty, return True.
+# If the string is empty, return True. 
 
 # If the string has only one character, return True.
 
