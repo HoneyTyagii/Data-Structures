@@ -22,7 +22,7 @@
 # word consists of lowercase and uppercase English letters.                                
               
  
-# Approach 
+# Approach  
  
 # If the string is empty, return True.  
 
