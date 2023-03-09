@@ -33,7 +33,7 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         left = 1
-        right = max(piles) 
+        right = max(piles)
         def can_eat_all_bananas(speed):
             time = 0
             for pile in piles:
