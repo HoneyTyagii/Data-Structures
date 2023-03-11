@@ -31,7 +31,7 @@
 # 1 <= piles[i] <= 109
 
 class Solution:
-    def minEatingSpeed(self, piles: List[int], h: int) -> int: 
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:  
         left = 1
         right = max(piles)
         def can_eat_all_bananas(speed):
