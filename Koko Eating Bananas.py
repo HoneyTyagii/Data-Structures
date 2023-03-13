@@ -27,7 +27,7 @@
 # Constraints: 
 
 # 1 <= piles.length <= 104
-# piles.length <= h <= 109
+# piles.length <= h <= 109 
 # 1 <= piles[i] <= 109 
 
 class Solution:
