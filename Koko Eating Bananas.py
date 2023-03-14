@@ -24,7 +24,7 @@
 # Output: 23
   
    
-# Constraints: 
+# Constraints:  
 
 # 1 <= piles.length <= 104
 # piles.length <= h <= 109 
