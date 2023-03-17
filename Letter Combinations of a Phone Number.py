@@ -40,7 +40,7 @@ class Solution:
                  '9': ['w', 'x', 'y', 'z']} 
         res = [] 
         def dfs(i, path):  
-            if i == len(digits):
+            if i == len(digits): 
                 res.append(path)
                 return
             for j in phone[digits[i]]: 
