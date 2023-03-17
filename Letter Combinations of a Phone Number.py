@@ -43,7 +43,7 @@ class Solution:
             if i == len(digits):
                 res.append(path)
                 return
-            for j in phone[digits[i]]:
+            for j in phone[digits[i]]: 
                 dfs(i+1, path+j)
         dfs(0, '')
         return res
