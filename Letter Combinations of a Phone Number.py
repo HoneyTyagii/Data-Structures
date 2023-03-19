@@ -28,7 +28,7 @@
  
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]: 
-        if not digits: 
+        if not digits:  
             return []
         phone = {'2': ['a', 'b', 'c'],
                  '3': ['d', 'e', 'f'],
