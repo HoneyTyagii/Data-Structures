@@ -23,7 +23,7 @@
 
 # Constraints:
 
-# 0 <= digits.length <= 4   
+# 0 <= digits.length <= 4    
 # digits[i] is a digit in the range ['2', '9'].  
  
 class Solution:
