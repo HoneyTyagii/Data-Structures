@@ -27,7 +27,7 @@
 # digits[i] is a digit in the range ['2', '9'].       
    
 class Solution:  
-    def letterCombinations(self, digits: str) -> List[str]:   
+    def letterCombinations(self, digits: str) -> List[str]:    
         if not digits:  
             return []   
         phone = {'2': ['a', 'b', 'c'],
