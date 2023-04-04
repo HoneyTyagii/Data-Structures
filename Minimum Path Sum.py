@@ -27,7 +27,7 @@
 
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:     
-        m, n = len(grid), len(grid[0]) 
+        m, n = len(grid), len(grid[0])  
         for i in range(1, m): 
             grid[i][0] += grid[i-1][0] 
         for i in range(1, n): 
