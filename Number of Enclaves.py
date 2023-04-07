@@ -2,7 +2,6 @@
 # Medium
 # 3.1K
 # 60
-# Companies
 # You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.
 
 # A move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.
