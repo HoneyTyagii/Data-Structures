@@ -1,8 +1,5 @@
 # 2390. Removing Stars From a String
-# Medium
-# 1.8K
-# 126
-# Companies
+
 # You are given a string s, which contains stars *.
 
 # In one operation, you can:
