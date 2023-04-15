@@ -1,8 +1,5 @@
 # 2218. Maximum Value of K Coins From Piles
-# Hard
-# 1.6K
 # 25
-# Companies
 # There are n piles of coins on a table. Each pile consists of a positive number of coins of assorted denominations.
 
 # In one move, you can choose any coin on top of any pile, remove it, and add it to your wallet.
