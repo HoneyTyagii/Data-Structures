@@ -25,3 +25,7 @@
 # 3 <= salary.length <= 100
 # 1000 <= salary[i] <= 106
 # All the integers of salary are unique.
+
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        return (sum(salary)-(max(salary)+min(salary))) / (len(salary)-2)
