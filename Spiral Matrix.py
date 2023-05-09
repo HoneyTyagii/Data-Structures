@@ -22,3 +22,7 @@
 # n == matrix[i].length
 # 1 <= m, n <= 10
 # -100 <= matrix[i][j] <= 100
+
+class Solution:
+    def spiralOrder(self, x: List[List[int]]) -> List[int]:
+        return x and [*x.pop(0)] + self.spiralOrder([*zip(*x)][::-1])
