@@ -2,10 +2,10 @@
 
 # An underground railway system is keeping track of customer travel times between different stations. They are using this data to calculate the average time it takes to travel from one station to another.
 
-# Implement the UndergroundSystem class:
+# Implement the UndergroundSystem class: 
 
 # void checkIn(int id, string stationName, int t)
-# A customer with a card ID equal to id, checks in at the station stationName at time t.
+# A customer with a card ID equal to id, checks in at the station stationName at time t. 
 # A customer can only be checked into one place at a time.
 # void checkOut(int id, string stationName, int t)
 # A customer with a card ID equal to id, checks out from the station stationName at time t.
