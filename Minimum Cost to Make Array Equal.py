@@ -26,7 +26,7 @@
 # Input: nums = [2,2,2,2,2], cost = [4,2,8,1,3]
 # Output: 0
 # Explanation: All the elements are already equal, so no operations are needed.
- 
+
 
 # Constraints:
 
