@@ -59,5 +59,5 @@ class Solution:
         
         return -1
 
-# time complexity : O(m∗n)
-# space complexity : O(m∗n)
+# time complexity: O(N^2 + R^2), where N is the number of routes, and R is the number of stops in a route.
+# space complexity: O(N^2 + R^2)
