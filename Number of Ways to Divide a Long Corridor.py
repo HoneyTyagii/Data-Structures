@@ -42,8 +42,9 @@
 class Solution:
     def numberOfWays(self, corr: str) -> int:
 	    indeces = [i for i, c in enumerate(corr) if c == 'S']
-	    l = len(indeces)
-		if l % 2 or l == 0:
+	    
+        l = len(indeces)
+	    if l % 2 or l == 0:
 			return 0
     
 	    ans = 1
