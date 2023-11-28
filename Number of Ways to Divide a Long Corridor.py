@@ -39,19 +39,18 @@
 # 1 <= n <= 105
 # corridor[i] is either 'S' or 'P'.
 
-# class Solution:
-#     def numberOfWays(self, corr: str) -> int:
-# 	    indeces = [i for i, c in enumerate(corr) if c == 'S']
-	    
-#         l = len(indeces)
-# 	    if l % 2 or l == 0:
-# 			return 0
+class Solution:
+    def numberOfWays(self, corr: str) -> int:
+	    indeces = [i for i, c in enumerate(corr) if c == 'S']
+	    l = len(indeces)
+	    if l % 2 or l == 0:
+	    	return 0
     
-# 	    ans = 1
-# 	    for i in range(1, l - 1, 2):
-# 	    	ans *= indeces[i + 1] - indeces[i]
+	    ans = 1
+	    for i in range(1, l - 1, 2):
+	    	ans *= indeces[i + 1] - indeces[i]
     
-# 	    return ans % (10**9+7)
+	    return ans % (10**9+7)
 	
 # time complexity: O(n), where n is the length of the given string
 # space complexity: O(n), where n is the length of the given string
