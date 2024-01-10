@@ -60,6 +60,6 @@ class Solution:
             infect_time = max(right_infect_time, left_infect_time + right_distance + 2)
 
         if root.val == start:
-            distance = 0
+            distance = 0 
 
         return infect_time, distance
