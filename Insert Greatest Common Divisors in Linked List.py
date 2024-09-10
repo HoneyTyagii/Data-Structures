@@ -12,6 +12,7 @@
 
 # Example 1:
 
+
 # Input: head = [18,6,10,3]
 # Output: [18,6,6,2,10,1,3]
 # Explanation: The 1st diagram denotes the initial linked list and the 2nd diagram denotes the linked list after inserting the new nodes (nodes in blue are the inserted nodes).
