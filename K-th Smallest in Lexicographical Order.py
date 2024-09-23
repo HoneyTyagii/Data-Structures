@@ -1,7 +1,7 @@
 # 440. K-th Smallest in Lexicographical Order
 
 # Hard
-
+Extra Characters in a String
 # Given two integers n and k, return the kth lexicographically smallest integer in the range [1, n]. 
 
 # Example 1:
