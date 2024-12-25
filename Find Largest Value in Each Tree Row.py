@@ -40,3 +40,9 @@ class Solution:
 
 # Time complexity: O(N)
 # Space complexity: O(N)
+
+# 2 Approach
+
+class Solution:
+    def largestValues(self, r: Optional[TreeNode]) -> List[int]:
+        return [*(f:=lambda n,i,M={}:n and (setitem(M,i,max(M.get(i,-inf),n.val)),f(n.left,i+1),f(n.right,i+1))*0 or M)(r,0).values()]
