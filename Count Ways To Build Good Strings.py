@@ -37,3 +37,19 @@ class Solution:
         @cache
         def dfs(curLen): return (int(low <= curLen and curLen <= high) + dfs(curLen+zero) + dfs(curLen + one)) % (10**9+7) if curLen <= high else 0
         return dfs(0)
+    
+# 2 Approach
+
+class Solution:
+    def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
+        MOD = 10 ** 9 + 7
+        @cache
+        def dp(length):
+            if length > high:
+                return 0
+            count = 0
+            if length >= low:
+                count = 1
+            count = (count + dp(length + zero) + dp(length + one)) % MOD
+            return count
+        return dp(0)
