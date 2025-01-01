@@ -45,3 +45,23 @@ class Solution:
             maxx = max(maxx,(zero_count+one_count))
             i = i+1
         return maxx
+    
+# 2 Approach
+    
+class Solution:
+    def maxScore(self, s: str) -> int:
+        left = -1
+        zeros = 0
+        ones = 0
+
+        for i in range(len(s) - 1):
+            if s[i] == '0':
+                zeros += 1
+            else:
+                ones += 1
+
+            left = max(left, zeros - ones)
+        
+        ones += s[-1] == "1"
+
+        return left + ones
