@@ -58,3 +58,10 @@ class Solution(object):
 
 # time complexity: O(N), where N is the length of s
 # space complexity: O(N)
+    
+
+# 2 Approach
+
+class Solution:
+    def countPalindromicSubsequence(self, s: str) -> int:
+        return sum(len(set(s[l+1:r])) for a in ascii_lowercase if (l := s.find(a)) >= 0 and (r := s.rfind(a)) >= 0)
