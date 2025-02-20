@@ -41,3 +41,10 @@ class Solution:
     
 # time complexity: O(N), where N is the length of nums
 # space complexity: O(N)
+    
+
+# 2 Approach
+    
+class Solution:
+    def findDifferentBinaryString(self, a: List[str]) -> str:
+        return ''.join('01'[s[i]<'1'] for i,s in enumerate(a))
