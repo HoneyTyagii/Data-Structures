@@ -42,8 +42,8 @@ class ListNode:
     def __init__(self, count: int = -1):
         self.prev = None
         self.next = None
-        self.words = set()
-        self.count = count
+        self.words = set() 
+        self.count = count 
 
 class DoubleLinkedList:
     def __init__(self):
@@ -55,7 +55,7 @@ class DoubleLinkedList:
     def remove_word(self, node: ListNode, word: str) -> None:
         node.words.remove(word)
 
-        if not node.words:
+        if not node.words: 
             self.remove_node(node)
 
     def remove_node(self, node: ListNode) -> None:
@@ -70,7 +70,7 @@ class DoubleLinkedList:
 
 class AllOne:
     def __init__(self):
-        self.word_to_node = {}
+        self.word_to_node = {} 
         self.double_linked_list = DoubleLinkedList()
 
     def inc(self, key: str) -> None:
