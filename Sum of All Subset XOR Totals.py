@@ -51,3 +51,14 @@
 class Solution:
     def subsetXORSum(self, nums: List[int]) -> int:
         return reduce(lambda x,y: x|y,nums) << len(nums)-1
+    
+
+# 2 Approach
+    
+class Solution:
+    def subsetXORSum(self, nums: List[int]) -> int:
+        def helper(index, curr_XOR):
+            if index == len(nums):
+                return curr_XOR
+            return helper(index + 1, curr_XOR ^ nums[index]) + helper(index + 1, curr_XOR)
+        return helper(0, 0)
