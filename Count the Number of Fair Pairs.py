@@ -33,3 +33,10 @@ class Solution:
         f = lambda x: sum(bisect_right(nums, x - num, hi = i) for i, num in enumerate(nums))
         nums.sort()
         return f(upper) - f(lower - 1)
+
+
+# 2 Approach
+
+class Solution:
+    def countFairPairs(self, a: List[int], l: int, u: int) -> int:
+        return a.sort() or sum(bisect_right(a,u-v,i+1)-bisect_left(a,l-v,i+1) for i,v in enumerate(a))
