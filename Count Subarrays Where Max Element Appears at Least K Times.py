@@ -34,3 +34,21 @@ class Solution:
                 l+=1
             ans+=l
         return ans
+    
+
+# 2 Approach
+    
+class Solution:
+    def countSubarrays(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        maxx = max(nums)
+        i, j, ans, fq = 0, 0, 0, collections.Counter()
+        while j < n :
+            fq[nums[j]] += 1
+            while i <= j and fq[maxx] >= k :
+                ans += n - j 
+                fq[nums[i]] -= 1
+                if fq[nums[i]] == 0 : del fq[nums[i]]
+                i += 1
+            j += 1
+        return ans
