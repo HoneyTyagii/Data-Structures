@@ -59,3 +59,40 @@ class Solution:
                   zero_indegree.add(v)
           max_count = max(max_count, max(counts[u]))
       return max_count if visited == n else -1
+
+
+# 2 Approach
+
+class Solution:
+    def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:
+        n = len(colors)
+        ind = [0] * n
+        adj = [[] for _ in range(n)]
+        dp = [[0]*26 for _ in range(n)]
+
+        for u, v in edges:
+            ind[v] += 1
+            adj[u].append(v)
+
+        q = deque()
+        for i in range(n):
+            if ind[i] == 0:
+                q.append(i)
+
+        ans, processed = 0, 0
+        while q:
+            u = q.popleft()
+            processed += 1
+            dp[u][ord(colors[u]) - ord('a')] += 1
+            for v in adj[u]:
+                ind[v] -= 1
+
+                for c in range(26):
+                    dp[v][c] = max(dp[v][c], dp[u][c])
+
+                if ind[v] == 0:
+                    q.append(v)
+
+            ans = max(ans, max(dp[u]))
+
+        return ans if processed == n else -1
