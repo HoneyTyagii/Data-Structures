@@ -56,3 +56,18 @@ class Solution:
                 return node       
             curr = new 
         return -1
+    
+
+# 2 Approach
+    
+class Solution:
+    def closestMeetingNode(self, edges: List[int], node1: int, node2: int) -> int:
+        def dfs(node):
+            dist,res = 0,[-1]*len(edges)
+            while node!=-1==res[node]:
+                res[node],node,dist = dist,edges[node],dist+1
+            return res
+
+        return min(((max(dist1,dist2),node) 
+            for dist1,dist2,node in zip(dfs(node1),dfs(node2),count())
+                if dist1>-1<dist2),default=(0,-1))[1]
