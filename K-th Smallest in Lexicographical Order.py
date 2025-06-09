@@ -46,3 +46,29 @@ class Solution:
             next_number *= 10
 
         return total_count
+
+
+# 2 Aprroach
+
+class Solution:
+    def findKthNumber(self, n: int, k: int) -> int:
+        def countSteps(prefix, n):
+            steps = 0
+            current = prefix
+            next_prefix = prefix + 1
+            while current <= n:
+                steps += min(n + 1, next_prefix) - current
+                current *= 10
+                next_prefix *= 10
+            return steps
+        current = 1
+        k -= 1
+        while k > 0:
+            steps = countSteps(current, n)
+            if steps <= k:
+                current += 1
+                k -= steps
+            else:
+                current *= 10
+                k -= 1
+        return current
