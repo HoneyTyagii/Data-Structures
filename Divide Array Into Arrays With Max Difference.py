@@ -46,3 +46,9 @@ class Solution:
                 ans.clear()
                 return ans
         return ans
+    
+# 2 Approach
+    
+class Solution:
+    def divideArray(self, a: List[int], k: int) -> List[List[int]]:
+        return (b:=[*zip(*[iter(sorted(a))]*3)])*all(u-v<=k for v,_,u in b)
