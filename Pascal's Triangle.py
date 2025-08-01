@@ -29,3 +29,10 @@ class Solution:
 
 # time complexity : O(n^2)
 # space complexity : O(n^2)
+
+
+# 2 Approach
+
+class Solution:
+    def generate(self, n: int) -> List[List[int]]:
+        return reduce(lambda q,k:q+[[1,*(sum(q[-1][i:i+2]) for i in range(k)),1]],range(n-1),[[1]])
