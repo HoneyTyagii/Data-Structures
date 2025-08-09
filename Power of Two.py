@@ -35,3 +35,10 @@ class Solution:
         while two_pow<n :
             two_pow = two_pow * 2
         return(two_pow==n)
+
+
+# 2 Approach
+    
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        return n > 0 and (n &(n-1)) == 0
