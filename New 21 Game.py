@@ -49,3 +49,18 @@ class Solution:
                 remove=dp.get(i+maxPts,1)
             windowsum+= dp[i]-remove
         return dp[0] 
+
+# 2 Approach
+    
+class Solution:
+    def new21Game(self, n: int, k: int, maxPts: int) -> float:
+        dp = [0] * (n+1)
+        dp[0] = 1
+        prev_prob = 1 if k > 0 else 0
+        for i in range(1, n+1):
+            dp[i] = prev_prob/maxPts
+            if i < k:
+                prev_prob += dp[i]
+            if i - maxPts >= 0 and i - maxPts < k:
+                prev_prob -= dp[i - maxPts]
+        return sum(dp[k:])
