@@ -54,3 +54,10 @@ class Solution(object):
                 return 0
         
         return sum(dp(i,j) for i in range(m) for j in range(n))
+
+
+# 2 Approach
+    
+class Solution:
+    def countSquares(self, g: List[List[int]]) -> int:
+        return sum(starmap(f:=cache(lambda i,j:i*j*g[i][j] and 1+min(f(i,j-1),f(i-1,j-1),f(i-1,j)) or g[i][j]),product(range(len(g)),range(len(g[0])))))
