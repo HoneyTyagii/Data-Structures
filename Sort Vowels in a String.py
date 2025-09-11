@@ -47,3 +47,23 @@ class Solution:
     
     # time complexity: O(NlogN), where N is the length of s
     # space complexity: O(N)
+
+# 2 Approach
+    
+class Solution:
+    def isVowel(self, c):
+        return c.lower() in "aeiou"
+
+    def sortVowels(self, s: str) -> str:
+        vowels = [ch for ch in s if self.isVowel(ch)]
+        vowels.sort()
+
+        res = []
+        idx = 0
+        for ch in s:
+            if self.isVowel(ch):
+                res.append(vowels[idx])
+                idx += 1
+            else:
+                res.append(ch)
+        return "".join(res)
