@@ -72,3 +72,34 @@ class FoodRatings:
 
     def highestRated(self, cuisine: str) -> str:
         return self.data[cuisine][0][1]
+    
+
+# 2 Approach
+    
+from sortedcontainers import SortedSet
+from collections import defaultdict
+
+class FoodRatings:
+
+    def __init__(self, foods: List[str], cuisines: List[str], ratings: List[int]):
+        self.cf = defaultdict(SortedSet)
+        self.fr = defaultdict(int)
+        self.fc = {}
+
+        for f,c,r in zip(foods,cuisines,ratings):
+            self.cf[c].add((-r,f))
+            self.fr[f] = -r
+            self.fc[f] = c
+        
+    def changeRating(self, food: str, newRating: int) -> None:
+        item = (self.fr[food],food)
+        cui = self.fc[food]
+
+        self.cf[cui].discard(item)
+        self.fr[food] = -newRating
+        self.cf[cui].add((-newRating,food))
+        
+        return 
+
+    def highestRated(self, cuisine: str) -> str:
+        return self.cf[cuisine][0][1]
