@@ -31,3 +31,17 @@ class Solution:
         ctr = Counter(nums)                                 
         mx = max(ctr.values())                              
         return sum(filter(lambda x: x == mx, ctr.values())) 
+
+# 2 Approach
+    
+class Solution:
+    def maxFrequencyElements(self, nums):
+        freq = [0] * 101
+        mx = ans = 0
+        for x in nums:
+            freq[x] += 1
+            mx = max(mx, freq[x])
+        for f in freq:
+            if f == mx:
+                ans += f
+        return ans
