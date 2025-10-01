@@ -30,3 +30,15 @@
 class Solution:
     def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
         return numBottles + (numBottles-1)//(numExchange-1)
+    
+# 2 Approach
+    
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        total = numBottles
+        while numBottles >= numExchange:
+            empty_bottles = numBottles % numExchange
+            new_bottles = numBottles // numExchange
+            numBottles = empty_bottles + new_bottles
+            total += new_bottles
+        return total
