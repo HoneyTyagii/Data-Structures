@@ -20,7 +20,7 @@
 # Input: cards = [1,2,1,2]
 # Output: false
  
-# Constraints:
+# Constraints:  
 
 # cards.length == 4
 # 1 <= cards[i] <= 9
