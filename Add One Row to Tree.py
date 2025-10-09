@@ -27,7 +27,7 @@
 
 # The number of nodes in the tree is in the range [1, 104].
 # The depth of the tree is in the range [1, 104].
-# -100 <= Node.val <= 100
+# -100 <= Node.val <= 100.  
 # -105 <= val <= 105
 # 1 <= depth <= the depth of tree + 1
 
