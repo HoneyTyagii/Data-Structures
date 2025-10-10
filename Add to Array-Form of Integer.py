@@ -6,7 +6,7 @@
 # Given num, the array-form of an integer, and an integer k, return the array-form of the integer num + k.
 
  
-
+   
 # Example 1:
 
 # Input: num = [1,2,0,0], k = 34
