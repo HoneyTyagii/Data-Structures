@@ -13,7 +13,7 @@
 # Return true if you can get such expression that evaluates to 24, and false otherwise.
 
 # Example 1:
-# Input: cards = [4,1,8,7]
+# Input: cards = [4,1,8,7]  
 # Output: true
 # Explanation: (8-4) * (7-1) = 24
 # Example 2:
