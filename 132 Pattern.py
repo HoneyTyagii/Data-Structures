@@ -8,7 +8,7 @@
      
 # Example 1:   
    
-# Input: nums = [1,2,3,4] 
+# Input: nums = [1,2,3,4]  
 # Output: false
 # Explanation: There is no 132 pattern in the sequence.
 # Example 2:
