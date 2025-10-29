@@ -13,14 +13,14 @@
 # Return true if you can get such expression that evaluates to 24, and false otherwise.
 
 # Example 1:
-# Input: cards = [4,1,8,7]
+# Input: cards = [4,1,8,7]  
 # Output: true
 # Explanation: (8-4) * (7-1) = 24
 # Example 2:
 # Input: cards = [1,2,1,2]
 # Output: false
  
-# Constraints:
+# Constraints:  
 
 # cards.length == 4
 # 1 <= cards[i] <= 9

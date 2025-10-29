@@ -9,7 +9,7 @@
 # Given an integer n, return the minimum number of operations to get the character 'A' exactly n times on the screen. 
 
 # Example 1:
-
+     
 # Input: n = 3
 # Output: 3
 # Explanation: Initially, we have one character 'A'.
