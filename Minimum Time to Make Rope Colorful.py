@@ -46,3 +46,21 @@ class Solution:
                 ans += min(neededTime[i], neededTime[i - 1])
                 neededTime[i] = max(neededTime[i], neededTime[i - 1])
         return ans
+
+
+# 2 Approach
+
+class Solution:
+    def minCost(self, colors: str, neededTime: List[int]) -> int:
+        s=0
+        i=1
+        while i<len(colors):
+            if colors[i]==colors[i-1]:
+                j=i-1
+                while i<len(colors) and colors[i]==colors[j]:
+                    i+=1
+                r=neededTime[j:i]
+                s+=sum(r)-max(r)
+            else:
+                i+=1    
+        return s
