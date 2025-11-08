@@ -41,3 +41,14 @@ class Solution:
     
 # time complexity : O(logn)
 # space complexity: O(logn)
+
+
+# 2 Approach
+
+class Solution:
+    def minimumOneBitOperations(self, n: int) -> int:
+        ans = 0
+        while n:
+            ans ^= n
+            n >>= 1
+        return ans
