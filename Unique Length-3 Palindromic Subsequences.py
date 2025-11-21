@@ -65,3 +65,9 @@ class Solution(object):
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
         return sum(len(set(s[l+1:r])) for a in ascii_lowercase if (l := s.find(a)) >= 0 and (r := s.rfind(a)) >= 0)
+    
+# 3 Approach
+
+class Solution:
+    def countPalindromicSubsequence(self, s: str) -> int:
+        return sum(len({*s[s.find(c)+1:s.rfind(c)]}) for c in {*s})
