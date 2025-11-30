@@ -45,3 +45,25 @@ class Solution:
                 ret = min(ret,i-dic.get((cur-target)%p))
             dic[cur] = i
         return ret if ret < n else -1
+    
+# 2 Approach
+
+class Solution:
+    def minSubarray(self, A, p):
+        need = sum(A) % p
+        if need == 0:
+            return 0
+
+        mp = {0: -1}   
+        cur = 0
+        res = n = len(A)
+
+        for i, a in enumerate(A):
+            cur = (cur + a) % p
+            target = (cur - need) % p
+            if target in mp:
+                res = min(res, i - mp[target])
+            
+            mp[cur] = i
+
+        return res if res < n else -1
