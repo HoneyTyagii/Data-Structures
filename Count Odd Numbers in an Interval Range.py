@@ -27,3 +27,10 @@ class Solution:
         if high % 2 == 0:
             high -=1
         return (high - low) // 2 + 1 if low <= high else 0
+    
+
+# 2 Approach
+
+class Solution:
+    def countOdds(self, l: int, h: int) -> int:
+        return h//2+h%2-l//2
