@@ -63,3 +63,9 @@ class Solution:
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
         return sum(list(column) != sorted(column) for column in zip(*strs))
+
+# 2 Approach
+
+class Solution:
+    def minDeletionSize(self, a: List[str]) -> int:
+        return sum([*q]>sorted(q) for q in zip(*a))
