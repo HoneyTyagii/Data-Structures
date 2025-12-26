@@ -72,3 +72,10 @@ class Solution:
     
     # time complexity: O(n)
     # space complexity: O(1)
+
+# 2 Approach
+
+class Solution:
+    def bestClosingTime(self, s: str) -> int:
+        return min(zip(accumulate((2*(c=='N')-1 for c in s),
+            initial=s.count('Y')),count()))[1]
