@@ -79,3 +79,54 @@ class Solution:
 class Solution:
     def mostBooked(self, n: int, m: List[List[int]]) -> int:
         return [a:=[*range(n)],o:=[],c:=[0]*n] and [[next(1 for _ in count() if not (o and o[0][0]<=s and not heappush(a,heappop(o)[1]))),heappush(o,a and [e,r:=heappop(a)] or [o[0][0]+e-s,r:=heappop(o)[1]]),setitem(c,r,c[r]+1)] for s,e in sorted(m)] and c.index(max(c))
+    
+
+# 3 Approach
+
+class Solution:
+    class Room:
+        def __init__(self, index: int, end: int = 0):
+            self.index = index
+            self.end = end
+    
+    def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
+        """ 
+        idea: keep 2 min-heap (最小堆積), one store unused and the other store room being used
+        use a list to keep track of number of times each room is used, return the max
+        when a new event start, it first check 
+        if any room is unused. 
+            if so, pop the min
+            if not, we should wait. wait till the next room is freed i.e. pop one room from the being used rooms by min ending time
+        """
+        # set up
+        count = [0] * n
+        unused = []
+        using = []
+        meetings = sorted(meetings, key=lambda meeting: meeting[0]) # sort by start time
+        rooms = [self.Room(i) for i in range(n)] # room 0 to room n-1
+        for room in rooms:
+            heapq.heappush(unused, (room.index, room)) 
+            # here are n rooms initially they are all unused
+            # python feature: compares by room.index, looks at the first item in the tuple
+        
+
+        # iterate over meetings
+        # print(meetings)
+        for m in meetings:
+            while using and using[0][0] <= m[0]: # first move room with meeting ended already back to unused queue i.e. room.end <= meet.start
+                end, index, room = heapq.heappop(using)
+                heapq.heappush(unused, (index, self.Room(index)))
+            duration = m[1] - m[0]
+            if not unused: # that is, every room is used
+                end, index, room = heapq.heappop(using)
+                room = self.Room(index, duration + end)
+                count[index] += 1
+                heapq.heappush(using, (room.end, index, room))
+            else: # if exist unused room
+                index, room = heapq.heappop(unused)
+                room = self.Room(index, duration + m[0])
+                count[index] += 1
+                heapq.heappush(using, (room.end, index, room))
+
+        print(count)
+        return max(range(len(count)), key=lambda i: count[i])
