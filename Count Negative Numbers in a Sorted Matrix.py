@@ -35,3 +35,9 @@ class Solution:
             else: 
                 start = mid + 1
         return len(arr) - start
+    
+# 2 Approach
+
+class Solution:
+    def countNegatives(self, g: List[List[int]]) -> int:
+        return str(g).count('-')
