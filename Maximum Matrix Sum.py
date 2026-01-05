@@ -45,3 +45,21 @@ class Solution:
                 abs_sum += abs(matrix[i][j])
             
         return abs_sum if cnt % 2 == 0 else abs_sum - abs_min * 2
+
+
+# 2 Approach
+
+class Solution:
+    def maxMatrixSum(self, matrix: List[List[int]]) -> int:
+        result = 0
+        low_neg_val = float('inf')
+        neg_count = 0
+        for row in matrix:
+            for col in row:
+                result += abs(col)
+                low_neg_val = min(abs(col),low_neg_val)
+                if col < 0:
+                    neg_count+= 1
+        if neg_count%2 != 0:
+            result -= 2*low_neg_val
+        return result
