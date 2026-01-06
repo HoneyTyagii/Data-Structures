@@ -41,3 +41,11 @@ class Solution:
                 q = [kid for node in q for kid in (node.left, node.right) if kid]
                 depth -= 1
             return -ans[1]
+
+# 2 Approach
+
+class Solution:
+    def maxLevelSum(self, r: Optional[TreeNode]) -> int:
+        z = Counter()
+        (f:=lambda n,i:n and (z.update({i:n.val}),f(n.left,i+1),f(n.right,i+1)))(r,1)
+        return max(z,key=z.get)
