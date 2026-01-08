@@ -51,3 +51,23 @@ class Solution:
     
     # time complexity o(n*m)
     # space complexity o(n*m)
+
+# 2 Approach
+
+class Solution:
+    def maxDotProduct(self, nums1, nums2):
+        row=len(nums1)
+        col=len(nums2)
+        dp=[[float('-inf')]*col for _ in range(row)]
+        dp[0][0]=nums1[0]*nums2[0]
+        for i in range(1,col):
+            dp[0][i]=max(dp[0][i-1],nums2[i]*nums1[0])
+        for i in range(1,row):
+            dp[i][0]=max(dp[i-1][0],nums1[i]*nums2[0])
+        
+        for i in range(1,row):
+            for j in range(1,col):
+                dp[i][j]=max(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]+(nums1[i]*nums2[j]),nums1[i]*nums2[j])
+
+
+        return dp[row-1][col-1]
