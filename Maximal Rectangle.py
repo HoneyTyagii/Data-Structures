@@ -49,3 +49,26 @@ class Solution:
                 stack.append(i)
         
         return max_area
+    
+# 2 Approach
+
+class Solution :
+    def largestRectangleArea( self, heights : List[int] ) -> int :
+        mstack = []
+        maxArea = 0
+        for index in range(len(heights)) :
+            curHeight = heights[index]
+            while mstack and heights[mstack[-1]] > curHeight :
+                popHeight = heights[mstack.pop()]
+                maxArea = max(maxArea, (index if not mstack else index - mstack[-1] - 1) * popHeight)
+            mstack.append(index)
+        return maxArea
+    
+    def maximalRectangle( self, matrix : List[List[str]] ) -> int :
+        heights = [0] * (len(matrix[0]) + 1)
+        maxArea = 0
+        for row in matrix :
+            for index, element in enumerate(row) :
+                heights[index] = 0 if element == '0' else heights[index] + 1
+            maxArea = max(maxArea, self.largestRectangleArea(heights))
+        return maxArea
