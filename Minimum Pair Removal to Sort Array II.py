@@ -1,0 +1,67 @@
+# 3510. Minimum Pair Removal to Sort Array II
+
+# Hard
+
+# Given an array nums, you can perform the following operation any number of times:
+
+# Select the adjacent pair with the minimum sum in nums. If multiple such pairs exist, choose the leftmost one.
+# Replace the pair with their sum.
+# Return the minimum number of operations needed to make the array non-decreasing.
+
+# An array is said to be non-decreasing if each element is greater than or equal to its previous element (if it exists).
+
+ 
+
+# Example 1:
+
+# Input: nums = [5,2,3,1]
+
+# Output: 2
+
+# Explanation:
+
+# The pair (3,1) has the minimum sum of 4. After replacement, nums = [5,2,4].
+# The pair (2,4) has the minimum sum of 6. After replacement, nums = [5,6].
+# The array nums became non-decreasing in two operations.
+
+# Example 2:
+
+# Input: nums = [1,2,2]
+
+# Output: 0
+
+# Explanation:
+
+# The array nums is already sorted.
+
+ 
+
+# Constraints:
+
+# 1 <= nums.length <= 105
+# -109 <= nums[i] <= 109
+
+class Solution:
+    def minimumPairRemoval(self, nums: List[int]) -> int:
+        heap, cnt_decrease, steps, n = [], 0, 0, len(nums)
+        for i, (a, b) in enumerate(pairwise(nums)):
+            heappush(heap, (a+b, i))
+            cnt_decrease += (a > b)
+
+        prev, next = [*range(-1, n-1)], [*range(1, n+1)]
+        next[-1] = -1
+        while cnt_decrease:
+            s, a = heappop(heap)
+            b = next[a]
+            if s == nums[a] + nums[b]:
+                cnt_decrease -= (nums[a] > nums[b])
+                if prev[a] != -1:
+                    heappush(heap, (s + nums[prev[a]], prev[a]))
+                    cnt_decrease += (nums[prev[a]] > s) - (nums[prev[a]] > nums[a])
+                if next[b] != -1:
+                    heappush(heap, (s + nums[next[b]], a))
+                    cnt_decrease += (s > nums[next[b]]) - (nums[b] > nums[next[b]])
+                nums[a], nums[b] = s, inf
+                next[a], prev[next[b]] = next[b], a
+                steps += 1
+        return steps
