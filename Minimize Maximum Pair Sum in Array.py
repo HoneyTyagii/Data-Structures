@@ -44,3 +44,9 @@ class Solution:
     
 # time complexity: O(NlogN), where N is the length of nums
 # space complexity: O(1)
+
+# 2 Approach
+
+class Solution:
+    def minPairSum(self, n: List[int]) -> int:
+        return n.sort() or max(n[i]+n[~i] for i in range(len(n)//2))
