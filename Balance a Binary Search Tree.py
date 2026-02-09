@@ -43,3 +43,10 @@ class Solution:
         root.left = self.sortedArrayToBST(start, mid - 1)
         root.right = self.sortedArrayToBST(mid + 1, end)
         return root
+    
+# 2 Approach
+
+class Solution:
+    def balanceBST(self, r: TreeNode) -> TreeNode:
+        return (g:=lambda a:a and TreeNode(a[m:=len(a)//2],g(a[:m]),g(a[m+1:])) or None)(
+            (f:=lambda n:n and f(n.left)+[n.val]+f(n.right) or [])(r))
