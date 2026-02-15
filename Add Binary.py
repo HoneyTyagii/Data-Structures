@@ -40,3 +40,9 @@ class Solution:
             result = str(sum % 2) + result
         # Return the result string
         return result
+
+# 2 Approach
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        return bin(int(a, 2) + int(b, 2))[2 : ]
