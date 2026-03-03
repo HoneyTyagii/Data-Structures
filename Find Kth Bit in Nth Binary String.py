@@ -38,3 +38,21 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
         return str((l:=[0],[l.extend([1]+[v^1 for v in l[::-1]]) for _ in range(1,n)])[0][k-1])
+    
+# 2 Approach
+
+class Solution:
+    def findKthBit(self, n: int, k: int) -> str:
+
+        def rec(n,k):
+            mid = (2**n-1)//2
+            if k == 0:
+                return 0
+            elif k == mid:
+                return 1
+            elif k > mid:
+                return 1-rec(n-1, 2*mid-k)
+            else:
+                return rec(n-1, k)
+        
+        return str(rec(n,k-1))
