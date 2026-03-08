@@ -48,3 +48,12 @@ class Solution:
 class Solution:
     def findDifferentBinaryString(self, a: List[str]) -> str:
         return ''.join('01'[s[i]<'1'] for i,s in enumerate(a))
+
+# 3 Approach
+
+class Solution:
+    def findDifferentBinaryString(self, nums: List[str]) -> str:
+        res=""
+        for i in range(len(nums)):
+            res+=str(int(nums[i][i])^1)
+        return res
