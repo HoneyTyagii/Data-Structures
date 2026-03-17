@@ -48,3 +48,10 @@ class Solution:
     
 # time complexity: O(MNlogN), where M is the length of matrix, N is the length of matrix[0]
 # space complexity: O(1)
+
+# 2 Appraoch
+
+class Solution:
+    def largestSubmatrix(self, g: List[List[int]]) -> int:
+        g = zip(*(accumulate(r,lambda q,v:q*v+v) for r in zip(*g)))
+        return max(i*p for r in g for i,p in enumerate(sorted(r)[::-1],1))
