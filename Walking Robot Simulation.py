@@ -80,3 +80,15 @@ class Solution:
             res = max(res, curX*curX + curY*curY)
 
         return res
+
+# 2 Approach
+
+class Solution:
+    def robotSim(self, a: List[int], o: List[List[int]]) -> int:
+        o,xy,dxy,res = {i+j*1j for i,j in o},0,1j,0
+        for q in a:
+            if q<0: dxy *= (1j,-1j)[q]
+            else: xy += dxy*next((i for i in range(q) if xy+(i+1)*dxy in o),q)
+            res = max(res,int(abs(xy*xy)))
+
+        return res
