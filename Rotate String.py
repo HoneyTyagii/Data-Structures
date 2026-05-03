@@ -26,3 +26,9 @@
 class Solution:
     def rotateString(self, A: str, B: str) -> bool:
     	return (A in B*2) and (len(A) == len(B))
+
+# 2 Approach
+
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:
+        return len(s) == len(goal) and goal in (s + s)
