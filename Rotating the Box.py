@@ -60,3 +60,9 @@ class Solution:
                 elif row[i] == '*': j = i - 1 
                 i -= 1
         return  map(list, zip(*(box[::-1])))
+
+# 2 Approach
+
+class Solution:
+    def rotateTheBox(self, g: List[List[str]]) -> List[List[str]]:
+        return [*zip(*[re.sub('[.#]+',lambda m:''.join(sorted(m[0])[::-1]),''.join(r)) for r in g][::-1])]
